@@ -43,40 +43,40 @@ main {
   background-color: #85c1e9;
   position: absolute;
   top: 0;
-  left: 50%;
+  margin: 0 auto;
 }
 
 .box--top-right {
   background-color: #5dade2;
   position: absolute;
   top: 0;
-  left: 100%;
+  right: 0;
 }
 
 .box--center {
   background-color: #3498db;
+  left: 200px;
+  top: 250px;
   position: absolute;
-  top: 50%;
-  left: 50%;
 }
 
 .box--bottom-left {
   background-color: #2874a6;
   position: absolute;
-  top: 100%;
+  bottom: 0;
   left: 0;
 }
 
 .box--bottom-center {
   background-color: #21618c;
   position: absolute;
-  top: 100%;
-  left: 50%;
+  bottom: 0;
+  margin: 0 auto;
 }
 
 .box--bottom-right {
   background-color: #1b4f72;
   position: absolute;
-  top: 100%;
-  left: 100%;
+  bottom: 0;
+  right: 0;
 }
