@@ -62,7 +62,7 @@ h1 {
 .box--one {
   background-color: lightblue;
 
-  width: 100px;
+  width: 20vw;
   height: 100px;
 }
 
@@ -94,26 +94,24 @@ h1 {
 .box--five img {
   width: 100%;
 }
-.section p {
-  width: 50%;
-}
+
 @media (orientation: landscape) {
-  .playground {
+  .box--three {
     flex-direction: row;
   }
 }
 @media (prefers-color-scheme: dark) {
-  .section p {
+  .box--four {
     background-color: #ff4a11;
   }
 }
 @media screen and (min-width: 1199px) {
-  .section p {
+  .box--two {
     width: 400px;
   }
 }
 @media screen and (min-width: 599px) {
-  .section p {
+  .box--two {
     width: 200px;
   }
 }
