@@ -1,3 +1,17 @@
+:root {
+  --color-granite: darkgray;
+  --color-nemo: orange;
+  --color-foam: white;
+  --size-xsm: 4px;
+  --size-sm: 8px;
+  --size-m: 10px;
+  --size-l: 16px;
+  --size-xl: 32px;
+  --ls-s: 0.025em;
+  --lh-s: 1.2;
+  --lh-m: 1.4;
+}
+
 *,
 *::before,
 *::after {
@@ -7,36 +21,36 @@
 body {
   margin: 0;
   font-family: system-ui;
-  line-height: 1.2;
+  line-height: var(--lh-s);
 }
 
 header {
-  background: rgb(37 38 41 / 100%);
+  background: var(--color-granite);
 }
 
 h1 {
   text-align: center;
-  color: white;
-  line-height: 1.4;
+  color: var(--color-foam);
+  line-height: var(--lh-m);
   margin: 0;
-  letter-spacing: 0.025em;
+  letter-spacing: var(--ls-s);
   text-transform: uppercase;
-  padding-block: 16px;
+  padding-block: var(--size-l);
 }
 
 h2 {
-  letter-spacing: 0.025em;
+  letter-spacing: var(--ls-s);
 }
 
 strong {
-  color: #ff4a11;
+  color: var(--color-nemo);
 }
 
 section {
   display: flex;
   flex-wrap: wrap;
-  gap: 32px;
-  padding: 16px;
+  gap: var(--size-xl);
+  padding: var(--size-l);
   width: min(1000px, 100%);
   margin: 0 auto;
 }
@@ -54,46 +68,46 @@ figure {
   width: min(100%, 400px);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--size-m);
   margin: 0;
-  padding: 10px;
-  background-color: #ff4a11ff;
-  border-radius: 4px;
+  padding: var(--size-m);
+  background-color: var(--color-nemo);
+  border-radius: var(--size-xsm);
 }
 
 figcaption {
-  color: rgb(255 255 255);
+  color: var(--color-foam);
 }
 
 nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: var(--size-sm) var(--size-l);
 }
 
 a {
   display: inline-block;
   font-size: smaller;
-  padding: 8px;
-  border-radius: 4px;
-  background-color: hsl(14 100% 53%);
-  color: #fff;
+  padding: var(--size-sm);
+  border-radius: var(--size-xsm);
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
 }
 
 a:hover,
 a:focus-visible {
-  background-color: rgb(37 38 41);
+  background-color: var(--color-granite);
   text-decoration: none;
 }
 
 mark {
-  background-color: rgb(255 74 17);
-  color: #ffffff;
-  border-radius: 4px;
-  letter-spacing: 0.025em;
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
+  border-radius: var(--size-xsm);
+  letter-spacing: var(--ls-s);
 }
 
 ::selection {
-  background-color: #252629;
-  color: #ff4a11;
+  background-color: var(--color-granite);
+  color: var(--color-nemo);
 }
