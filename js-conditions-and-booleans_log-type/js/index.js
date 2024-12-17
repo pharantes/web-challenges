@@ -1,21 +1,24 @@
 let data;
-data = "null"
+data = [{ a: "null" }, "abc"]
+// data = { a: "null" };
+// data = null;
+
 function checkTypeofData() {
     if (data === null) {
-        return console.log(null)
+        return console.log("null")
+    }
+    if (Array.isArray(data) === true) {
+        return console.log("array");
     }
     switch (typeof data) {
+        case "object":
+            console.log('object');
+            break;
         case "string":
             console.log("string")
             break;
         case "number":
             console.log("number")
-            break;
-        case "object":
-            console.log("object")
-            break;
-        case "array":
-            console.log("array")
             break;
         case "undefined":
             console.log("undefined")
@@ -23,6 +26,7 @@ function checkTypeofData() {
         case "boolean":
             console.log("boolean")
             break;
+
         case "bigint":
             console.log("bigint")
             break;
