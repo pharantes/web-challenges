@@ -4,23 +4,23 @@ const display = document.querySelector('[data-js="display"]');
 const date = new Date();
 const day = date.getDay();
 const time = date.getHours();
-let greetings;
+let greeting;
 let color;
 
 function getGreeting(time) {
   if (time > 6 && time < 13) {
-    greetings = "Good Morning";
+    greeting = "Good Morning";
   }
   if (time > 13 && time < 18) {
-    greetings = "Good Afternoon";
+    greeting = "Good Afternoon";
   }
   if (time > 18 && time < 22) {
-    greetings = "Good Evenning";
+    greeting = "Good Evenning";
   }
   if (time > 22 && time < 6) {
-    greetings = "Good Night";
+    greeting = "Good Night";
   }
-  return greetings;
+  return greeting;
 }
 function getDayColor() {
   switch (day) {
