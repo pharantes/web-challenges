@@ -25,35 +25,38 @@ const day = date.getDay();
 const time = date.getHours();
 let greeting;
 let color;
-function getGreeting() {
-  time > 6 && time < 13 ? (greeting = "Good Morning") : "";
-  time > 13 && time < 19 ? (greeting = "Good Afternoon") : "";
-  time > 19 && time < 22 ? (greeting = "Good Evening") : "";
-  time > 22 && time < 6 ? (greeting = "Good Night") : "";
-}
 
-function getDayColor() {
-  switch (day) {
-    case "monday":
-      color = "darkgrey";
+function getGreeting(time) {
+  switch (true) {
+    case time > 6 && time < 13:
+      greetings = "Good Morning";
       break;
-    case "tuesday":
-      color = "lightblue";
+    case time > 13 && time < 18:
+      greetings = "Good Afternoon";
       break;
-    case "thursday":
-      color = "evening";
+    case time > 18 && time < 22:
+      greetings = "Good Evening";
       break;
-    case "friday":
-      color = "lightblue";
-      break;
-    case "saturday":
-      color = "hotpink";
-      break;
-    case "sunday":
-      color = "hotpink";
+    case time > 22 && time < 6:
+      greetings = "Good Night";
       break;
   }
 }
 
-display.textContent = getGreeting();
-document.body.style.backgroundColor = getDayColor();
+switch (day) {
+  case "thursday":
+  case "monday":
+    color = "darkgrey";
+    break;
+  case "friday":
+  case "tuesday":
+    color = "lightblue";
+    break;
+  case "saturday":
+  case "sunday":
+    color = "hotpink";
+    break;
+}
+
+display.textContent = getGreeting(greeting);
+document.body.style.backgroundColor = getDayColor(color);
