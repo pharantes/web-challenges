@@ -41,22 +41,24 @@ function getGreeting(time) {
       greetings = "Good Night";
       break;
   }
+  return greeting;
 }
-
-switch (day) {
-  case "thursday":
-  case "monday":
-    color = "darkgrey";
-    break;
-  case "friday":
-  case "tuesday":
-    color = "lightblue";
-    break;
-  case "saturday":
-  case "sunday":
-    color = "hotpink";
-    break;
+function getDayColor() {
+  switch (day) {
+    case "thursday":
+    case "monday":
+      color = "darkgrey";
+      break;
+    case "friday":
+    case "tuesday":
+      color = "lightblue";
+      break;
+    case "saturday":
+    case "sunday":
+      color = "hotpink";
+      break;
+  }
+  return color;
 }
-
-display.textContent = getGreeting(greeting);
-document.body.style.backgroundColor = getDayColor(color);
+display.textContent = getGreeting();
+document.body.style.backgroundColor = getDayColor();
