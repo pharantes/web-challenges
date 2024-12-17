@@ -39,5 +39,5 @@ function getDayColor() {
   }
   return color;
 }
-display.textContent = getGreeting();
+display.textContent = getGreeting(time);
 document.body.style.backgroundColor = getDayColor();
