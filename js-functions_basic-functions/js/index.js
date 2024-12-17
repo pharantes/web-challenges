@@ -9,12 +9,16 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const book = {
+  title: "title",
+  author: "author",
+  rating: "rating",
+  soldCopies: "number of sold copies",
+};
 // --^-- write your code here --^--
 
 /*
 2: Log all variables to the console, for example:
-
 Title: The Lord of the Javascript
 Author: Mario
 Rating: 4.2
@@ -27,6 +31,16 @@ Then:
 */
 
 // --v-- write your code here --v--
+console.log(book.title);
+console.log(book.author);
+console.log(book.rating);
+console.log(book.soldCopies);
+
+book.soldCopies = "number of sold copies updated";
+book.rating = "better rating";
+
+console.log(book.rating);
+console.log(book.soldCopies);
 
 // --^-- write your code here --^--
 
@@ -40,5 +54,13 @@ Then:
 */
 
 // --v-- write your code here --v--
+function logBookData(data1, data2, data3, data4) {
+  console.log(data1);
+  console.log(data2);
+  console.log(data3);
+  console.log(data4);
+}
+
+logBookData(book.title, book.author, book.rating, book.soldCopies);
 
 // --^-- write your code here --^--
