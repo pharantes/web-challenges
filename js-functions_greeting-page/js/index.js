@@ -6,7 +6,7 @@ const day = date.getDay();
 const time = date.getHours();
 let greeting;
 let color;
-
+console.log(time);
 function getGreeting(time) {
   if (time > 6 && time < 13) {
     greeting = "Good Morning";
