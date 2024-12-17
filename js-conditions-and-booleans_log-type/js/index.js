@@ -15,7 +15,7 @@ function checkTypeofData() {
             console.log("object")
             break;
         case "array":
-            console.log("object")
+            console.log("array")
             break;
         case "undefined":
             console.log("undefined")
