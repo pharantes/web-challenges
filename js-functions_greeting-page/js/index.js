@@ -7,7 +7,7 @@ const time = date.getHours();
 let greeting;
 let color;
 console.log(time);
-function getGreeting(time) {
+function getGreeting() {
   if (time > 6 && time < 13) {
     greeting = "Good Morning";
   }
@@ -22,22 +22,23 @@ function getGreeting(time) {
   }
   return greeting;
 }
+console.log(day);
 function getDayColor() {
   switch (day) {
-    case "thursday":
-    case "monday":
+    case 4:
+    case 1:
       color = "darkgrey";
       break;
-    case "friday":
-    case "tuesday":
+    case 5:
+    case 2:
       color = "lightblue";
       break;
-    case "saturday":
-    case "sunday":
+    case 6:
+    case 0:
       color = "hotpink";
       break;
   }
   return color;
 }
-display.textContent = getGreeting(time);
+display.textContent = getGreeting();
 document.body.style.backgroundColor = getDayColor();
