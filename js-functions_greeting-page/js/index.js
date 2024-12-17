@@ -20,7 +20,7 @@ function getGreeting(time) {
   if (time > 22 && time < 6) {
     greetings = "Good Night";
   }
-  return greeting;
+  return greetings;
 }
 function getDayColor() {
   switch (day) {
