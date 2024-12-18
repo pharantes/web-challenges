@@ -5,7 +5,7 @@ const rotationInput = document.querySelector('[data-js="input-rotation"]');
 const box = document.querySelector('[data-js="box"]');
 
 colorInput.addEventListener("change", () => {
-  box.style.backgroundColor = `hsl(
+  box.style.background = `hsl(
     ${colorInput.value},
     100%,
     50%
