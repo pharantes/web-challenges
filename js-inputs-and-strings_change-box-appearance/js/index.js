@@ -7,8 +7,8 @@ const box = document.querySelector('[data-js="box"]');
 colorInput.addEventListener("change", () => {
   box.style.backgroundColor = `hsl(
     ${colorInput.value},
-    ${radiusInput.value}%,
-    ${rotationInput.value}%
+    100%,
+    50%
   )`;
 });
 
