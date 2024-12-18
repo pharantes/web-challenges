@@ -30,9 +30,6 @@ function calculateScrollPercentage() {
     document.documentElement.scrollHeight -
     document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
-  console.log(winScroll);
-  console.log(height);
-  console.log(scrolled);
   document.querySelector('[data-js="progress-bar"]').style.width =
     scrolled + "%";
 }
