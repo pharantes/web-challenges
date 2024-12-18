@@ -26,9 +26,13 @@ window.onscroll = function () {
 
 function calculateScrollPercentage() {
   var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.body.scrollHeight - document.body.clientHeight;
+  var height =
+    document.documentElement.scrollHeight -
+    document.documentElement.clientHeight;
   var scrolled = (winScroll / height) * 100;
-
+  console.log(winScroll);
+  console.log(height);
+  console.log(scrolled);
   document.querySelector('[data-js="progress-bar"]').style.width =
     scrolled + "%";
 }
