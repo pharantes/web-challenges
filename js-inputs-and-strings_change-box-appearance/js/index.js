@@ -4,7 +4,7 @@ const radiusInput = document.querySelector('[data-js="input-radius"]');
 const rotationInput = document.querySelector('[data-js="input-rotation"]');
 const box = document.querySelector('[data-js="box"]');
 
-colorInput.addEventListener("change", () => {
+colorInput.addEventListener("input", () => {
   box.style.background = `hsl(
     ${colorInput.value},
     100%,
@@ -12,9 +12,9 @@ colorInput.addEventListener("change", () => {
   )`;
 });
 
-radiusInput.addEventListener("change", () => {
+radiusInput.addEventListener("input", () => {
   box.style.borderRadius = `${radiusInput.value}%`;
 });
-rotationInput.addEventListener("change", () => {
+rotationInput.addEventListener("input", () => {
   box.style.transform = `rotate(${rotationInput.value}deg)`;
 });
