@@ -2,6 +2,7 @@ console.clear();
 const colorInput = document.querySelector('[data-js="input-color"]');
 const radiusInput = document.querySelector('[data-js="input-radius"]');
 const rotationInput = document.querySelector('[data-js="input-rotation"]');
+const textInput = document.querySelector('[data-js="input-text"]');
 const box = document.querySelector('[data-js="box"]');
 
 colorInput.addEventListener("input", () => {
@@ -18,3 +19,6 @@ radiusInput.addEventListener("input", () => {
 rotationInput.addEventListener("input", () => {
   box.style.transform = `rotate(${rotationInput.value}deg)`;
 });
+// textInput.addEventListener("input", () => {
+//   console.log(textInput.value);
+// });
