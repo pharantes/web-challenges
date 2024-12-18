@@ -6,27 +6,44 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <title>Forms and A11y</title>
+    <title>Personal Profile Form</title>
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <h1 class="title">Understanding A11y in Forms</h1>
-    <p id="description">
-      Please let us know how we can support you with a11y issues.
-    </p>
-
-    <form for="title">
-      <fieldset>
-        <legend>Enter your information</legend>
-        <label>Name:</label>
-        <input id="name-Input" type="text" />
-        <label>Age:</label>
-        <input id="age-Input" type="text" />
-        <label>Color you cannot see:</label>
-        <input id="color-Input" type="color" />
-        <textarea rows="7" placeholder="Leave us a message..."></textarea>
-        <button type="submit">Submit</button>
-      </fieldset>
-    </form>
+    <h1>Create your Personal Profile</h1>
+    <fieldset>
+      <h2>
+        Can you tell us a little bit more? We want to annoy you with unwanted
+        ads.
+      </h2>
+      <form action="">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="first-name">First name:</label>
+          <input id="first-name" type="text" />
+          <label for="last-name">Last name:</label>
+          <input id="last-name" type="text" />
+          <label for="last-name">Your birthday:</label>
+          <input type="date" />
+        </fieldset>
+        <h2>
+          Can you tell us a little bit more? We want to annoy you with unwanted
+          ads.
+        </h2>
+        <fieldset>
+          <legend>Further Information</legend>
+          <label for="color">Favourite color:</label>
+          <input id="color" type="color" />
+          <label for="favourite-pet">What is your favourite pet?</label>
+          <select id="favourite-pet" type="text">
+            <option value="default">----Select an option----</option>
+            <option value="cat">Cat</option>
+            <option value="dog">Dog</option>
+            <option value="fish">Fish</option>
+          </select>
+          <input type="date" />
+        </fieldset>
+      </form>
+    </fieldset>
   </body>
 </html>
