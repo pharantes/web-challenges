@@ -7,8 +7,8 @@ const box = document.querySelector('[data-js="box"]');
 colorInput.addEventListener("input", () => {
   box.style.background = `hsl(
     ${colorInput.value},
-    100%,
-    50%
+    70%,
+    60%
   )`;
 });
 
