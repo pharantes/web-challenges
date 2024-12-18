@@ -24,7 +24,7 @@ const copyInUppercaseButton = document.querySelector(
 
 // --v-- Write your code here --v--
 copyInUppercaseButton.addEventListener("click", () => {
-  secondCopyInput.value = firstCopyInput.value.toUpperCase();
+  secondCopyInUppercaseInput.value = firstCopyInUppercaseInput.value.toUpperCase();
 });
 // --^-- End of Task 2 --^--
 
