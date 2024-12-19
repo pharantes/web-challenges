@@ -5,20 +5,20 @@ const tosError = document.querySelector('[data-js="tos-error"]');
 const tosCheckbox = document.querySelector('[data-js="tos"]');
 
 function hideTosError() {
-  tosError.setAttribute("hidden", "");
+  tosError.style.display = "none";
 }
 
 function showTosError() {
-  tosError.removeAttribute("hidden");
+  tosError.style.display = "flex";
 }
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-
-  // --v-- write your code here --v--
-
-  // --^-- write your code here --^--
-
-  // eslint-disable-next-line no-alert
+  if (!event.target.checked) return
   alert("Form submitted");
+});
+
+tosCheckbox.addEventListener("change", (event) => {
+  if (event.target.checked) { hideTosError() }
+  else { showTosError() }
 });
