@@ -22,11 +22,8 @@ form.addEventListener("submit", (event) => {
   console.log(tosCheckbox.checked)
   // --v-- write your code here --v--
   if (tosCheckbox.checked == false) {
-    hideSuccess();
     return;
   }
-
-
   // --^-- write your code here --^--
 
   // eslint-disable-next-line no-alert
