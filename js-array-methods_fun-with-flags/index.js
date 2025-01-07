@@ -7,12 +7,17 @@ const queryInput = document.querySelector('[data-js="query-input"]');
 queryInput.addEventListener("input", (event) => {
   container.innerHTML = "";
 
-  const searchString = event.target.value;
+  const searchString = event.target.value.toLowerCase();
 
-  const foundCountry = null;
+  const foundCountries = countries.filter((country) => {
+    let name = country.name.toLowerCase()
+    return name.startsWith(searchString);
+  });
 
-  if (foundCountry) {
-    const countryElement = Country(foundCountry);
-    container.append(countryElement);
+  if (foundCountries) {
+    foundCountries.forEach(country => {
+      const countryElement = Country(country);
+      container.append(countryElement);
+    })
   }
 });
