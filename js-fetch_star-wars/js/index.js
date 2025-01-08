@@ -41,6 +41,18 @@ fetchDataAndRender();
 
 // --v-- your code below this line --v--
 
-function fetchDataAndRender() {
-  fetch(); // ?
+async function fetchDataAndRender() {
+  try {
+    const url = "https://swapi.py4e.com/api/people";
+
+    const response = await fetch(url);
+    const data = await response.json();
+    data.results.forEach((element) => {
+      const newCard = Card(element);
+      renderElement(newCard);
+    });
+    console.log(data);
+  } catch (error) {
+    console.log(error);
+  }
 }
