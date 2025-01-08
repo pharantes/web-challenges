@@ -9,9 +9,7 @@ async function fetchData() {
     // console.log("data:", data);
     const names = data.results.map((person) => person.name);
     console.log("names:", names);
-    const r2d2 = data.results.filter((person) => {
-      person.name == "R2-D2";
-    });
+    const r2d2 = data.results.filter((person) => person.name == "R2-D2");
     console.log("r2d2:", r2d2.eye_color);
   } catch (error) {
     console.log(error);
