@@ -6,9 +6,13 @@ const errorElement = document.querySelector("[data-js='error']");
 
 async function fetchUserData(url) {
   const response = await fetch(url);
+  const contentType = response.headers.get("content-type");
+
   // Check if the HTTP status is not OK
-  if (!response.ok && response.status == 404) {
+  if (!response.ok) {
     throw new Error(`HTTP error! Status: ${response.status}`);
+  } else if (!contentType.includes("application/json")) {
+    throw new Error(`We expected JSON but we got ${contentType}`);
   } else return await response.json();
 }
 
@@ -34,6 +38,7 @@ endpoints.forEach((endpoint) => {
     `;
       errorElement.textContent = "";
     } catch (error) {
+      console.log(error);
       errorElement.textContent = error.message;
       userElement.innerHTML = "No user data available.";
     }
