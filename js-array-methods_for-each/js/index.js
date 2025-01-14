@@ -18,5 +18,14 @@ const colors = [
   "#606E8C",
   "#A5A5A5",
 ];
+const body = document.querySelector("body");
+colors.forEach((color) => {
+  renderColorBox(color);
+});
 
-colors.forEach();
+function renderColorBox(color) {
+  let box = document.createElement("div");
+  box.classList.add("color-box");
+  box.style.backgroundColor = color;
+  body.append(box);
+}
