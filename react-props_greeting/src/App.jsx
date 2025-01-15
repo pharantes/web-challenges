@@ -1,3 +1,5 @@
+import { Greeting } from "./components/Greeting";
+// Alignment
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Greeting name="Bla bla" />;
 }
