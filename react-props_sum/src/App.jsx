@@ -1,3 +1,5 @@
+import Sum from "./components/Sum";
+
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  return <Sum a="1" b="2" />;
 }
