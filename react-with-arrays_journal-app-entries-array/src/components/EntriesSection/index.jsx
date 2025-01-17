@@ -47,16 +47,17 @@ export default function EntriesSection() {
         </Tab>
       </Tabs>
       <div className="entries-section__entries">
-        {entries.map((entry, index) => {
+        {entries.map((entry) => {
           return (
             <>
               <Entry
-                key={id}
+                key={entry.id}
                 date={entry.date}
                 motto={entry.motto}
                 notes={entry.notes}
               />
-              <Divider />
+
+              <Divider key={entry.id} />
             </>
           );
         })}
