@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "./styles.css";
 
 const animals = [
@@ -30,5 +31,40 @@ const animals = [
 const habitats = ["Mountains", "Ocean", "Forest", "Domestic Animal"];
 
 export default function App() {
-  return <h1>Animal Filter</h1>;
+  const [habitat, setHabitat] = useState("");
+  return (
+    <>
+      <h1>Animal Filter</h1>
+      {habitats.map((habitat, i) => {
+        return (
+          <Button text={habitat} key={i} onClick={() => setHabitat(habitat)} />
+        );
+      })}
+      <ul>
+        {animals
+          .filter((animal) => animal.habitat.includes(habitat))
+          .map((animal) => {
+            return (
+              <Card key={animal.id} name={animal.name} emoji={animal.emoji} />
+            );
+          })}
+      </ul>
+    </>
+  );
 }
+
+const Card = ({ name, emoji }) => {
+  return (
+    <li>
+      {name} {emoji}
+    </li>
+  );
+};
+
+const Button = ({ onClick, text }) => {
+  return (
+    <button onClick={onClick} className="button">
+      {text}
+    </button>
+  );
+};
