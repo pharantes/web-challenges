@@ -11,7 +11,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            setCount(count--);
+            setCount(count - 1);
             console.log("🤔");
           }}
         >
@@ -20,7 +20,7 @@ export default function App() {
         <button
           type="button"
           onClick={() => {
-            setCount(count++);
+            setCount(count + 1);
             console.log("🤔");
           }}
         >
