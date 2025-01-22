@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { uid } from "uid";
 import "./styles.css";
 import Form from "./components/Form";
 import List from "./components/List";
@@ -25,13 +26,13 @@ export default function App() {
   const [animals, setAnimals] = useState(initialAnimals);
 
   function handleAddAnimal(newAnimal) {
-    setAnimals({ ...initialAnimals, newAnimal });
+    setAnimals([...initialAnimals, { ...newAnimal, id: uid() }]);
   }
 
   return (
     <main className="app">
       <Form onAddAnimal={handleAddAnimal} />
-      <List animals={initialAnimals} />
+      <List animals={animals} />
     </main>
   );
 }
