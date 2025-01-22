@@ -49,6 +49,17 @@ function App() {
     setEntries([{ id: uid(), date, ...newEntry }, ...entries]);
   }
 
+  function handleToggleFavorite(id) {
+    setEntries((prevEntries) =>
+      prevEntries.map((entry) => {
+        if (entry.id == id) {
+          entry.isFavorite = true;
+        }
+
+        return entry;
+      })
+    );
+  }
   return (
     <div className="app">
       <Header />
@@ -62,12 +73,5 @@ function App() {
       <Footer />
     </div>
   );
-}
-function handleToggleFavorite(id) {
-  initialEntries.map((entry) => {
-    if (entry.id == id) {
-      return (entry.isFavorite = true);
-    }
-  });
 }
 export default App;
