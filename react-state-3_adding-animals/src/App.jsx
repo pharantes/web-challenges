@@ -25,13 +25,13 @@ export default function App() {
   const [animals, setAnimals] = useState(initialAnimals);
 
   function handleAddAnimal(newAnimal) {
-    console.log(newAnimal);
+    setAnimals({ ...initialAnimals, newAnimal });
   }
 
   return (
     <main className="app">
       <Form onAddAnimal={handleAddAnimal} />
-      <List animals={animals} />
+      <List animals={initialAnimals} />
     </main>
   );
 }
