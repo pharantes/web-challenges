@@ -53,12 +53,18 @@ function App() {
       )
     );
   }
-
+  function handleFilter() {
+    if (filter === "favorite") {
+      entries.filter((entry) => entry.isFavorite);
+    }
+  }
   function handleShowFavoriteEntries() {
     setFilter("favorites");
+    handleFilter();
   }
   function handleShowAllEntries() {
     setFilter("all");
+    handleFilter();
   }
   return (
     <div className="app">
