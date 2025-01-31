@@ -1,17 +1,11 @@
 import { LightButton, Icon, Text, Name, State } from "./Light.styled";
 
 export default function Light({ count, name, handleIncrement, handleRoom, lightOn }) {
-  // const [isOn, setIsOn] = useState(lightOn);
-
-  // function handleToggle() {
-  //   setIsOn((isOn) => !isOn);
-  // }
 
   return (
     <LightButton
       type="button"
       onClick={() => {
-        // handleToggle();
         handleRoom(name)
 
         if (!lightOn) {
