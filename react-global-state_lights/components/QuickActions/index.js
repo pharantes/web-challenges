@@ -1,0 +1,33 @@
+import styled from "styled-components";
+import Button from "../Button";
+
+const StyledQuickActions = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+export default function QuickActions({ handleIncrement }) {
+  return (
+    <StyledQuickActions>
+      <Button
+        type="button"
+        onClick={() => {
+          console.log("Turn all lights off");
+          handleIncrement(0)
+        }}
+      >
+        Turn all lights off
+      </Button>
+      <Button
+        type="button"
+        onClick={() => {
+          console.log("Turn all lights on");
+          handleIncrement(8)
+        }}
+      >
+        Turn all lights on
+      </Button>
+    </StyledQuickActions>
+  );
+}
