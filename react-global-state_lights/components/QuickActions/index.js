@@ -7,14 +7,16 @@ const StyledQuickActions = styled.div`
   gap: 16px;
 `;
 
-export default function QuickActions({ handleIncrement }) {
+export default function QuickActions({ rooms, handleIncrement, handleRoom }) {
   return (
     <StyledQuickActions>
       <Button
         type="button"
         onClick={() => {
           console.log("Turn all lights off");
+          handleRoom("off")
           handleIncrement(0)
+
         }}
       >
         Turn all lights off
@@ -23,7 +25,8 @@ export default function QuickActions({ handleIncrement }) {
         type="button"
         onClick={() => {
           console.log("Turn all lights on");
-          handleIncrement(8)
+          handleRoom("on")
+          handleIncrement(rooms.length)
         }}
       >
         Turn all lights on

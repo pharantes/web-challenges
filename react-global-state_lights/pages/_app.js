@@ -1,7 +1,6 @@
 import GlobalStyle from "../styles";
 import Layout from "../components/Layout";
 import { useState } from "react";
-import useLocalStorageState from "use-local-storage-state";
 
 export default function App({ Component, pageProps }) {
 
@@ -21,21 +20,35 @@ export default function App({ Component, pageProps }) {
   }
 
   function handleRoom(name) {
-    setLocalStorageRooms((prevState) => {
-      let updatedRooms = prevState.map((room) => {
-        if (room.name === name) {
-          return {
-            ...room, lightOn: !room.lightOn
-          }
-        } else {
-          return {
-            ...room
-          }
+    if (name === "off") {
+      return setLocalStorageRooms(rooms)
+    }
+    else if (name === "on") {
+      let updatedRooms = rooms.map((room) => {
+
+        return {
+          ...room, lightOn: true
         }
+
       })
-      console.log(updatedRooms)
-      return updatedRooms
-    })
+      return setLocalStorageRooms(updatedRooms)
+    }
+    else {
+      setLocalStorageRooms((prevState) => {
+        let updatedRooms = prevState.map((room) => {
+          if (room.name === name) {
+            return {
+              ...room, lightOn: !room.lightOn
+            }
+          } else {
+            return {
+              ...room
+            }
+          }
+        })
+        return updatedRooms
+      })
+    }
   }
 
   return (
