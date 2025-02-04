@@ -9,3 +9,5 @@ export default styled.div`
   background-color: red;
   }
 `
+
+// align

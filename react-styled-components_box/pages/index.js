@@ -10,4 +10,5 @@ export default function HomePage() {
       <BoxWithStyledComponents $isBlack />
     </div>
   );
+  // align
 }
