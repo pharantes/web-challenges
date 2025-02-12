@@ -8,6 +8,8 @@ const productSchema = new Schema({
   price: { type: Number, required: true },
   currency: { type: String, required: true },
   reviews: { type: [Schema.Types.ObjectId], ref: "Review" },
+  createdAt: { type: Date, default: Date.now },
+  updatedAt: { type: Date, default: Date.now },
 });
 
 const Product =
